@@ -1,0 +1,55 @@
+<!doctype html> 
+    <!-- HTML Padrão -->
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" />
+    <title>Intro Phaser 3</title>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+    <!--<script src="phaser.js"></script> -->
+    <script src="src/dialogs.js"></script>
+    <script src="src/actors.js"></script>
+    <script src="src/player.js"></script>
+    <script src="src/Fase_3.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- código javascript -->
+<script type="text/javascript">
+
+    // Configuração do jogo
+    var config = {
+        type: Phaser.AUTO,
+
+        // resolução e sistema de colisão.
+        width: window.innerWidth,
+        dheight: window.innerHeight,
+        physics: {
+              default: 'arcade',
+              arcade: {
+                  debug: true,
+              },
+        },
+
+        // tratamento dos gráficos: pixelado
+        render: {
+          antialiasGL: false,
+          pixelArt: true,
+        },
+
+        // funções da classe scene:
+        scene: [Fase_3],
+    };
+
+    // variáveis globais - jogo e jogador
+    console.log('start*');
+    var game = new Phaser.Game(config);
+
+</script>
+
+</body>
+</html>
